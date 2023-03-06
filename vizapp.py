@@ -6,7 +6,7 @@
 
 # add tools path
 import sys, datetime
-sys.path.append('..')
+sys.path.append('')
 
 import streamlit as st
 from tools import corsano as cs
