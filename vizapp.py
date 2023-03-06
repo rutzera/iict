@@ -5,9 +5,7 @@
 # - deal with error {'error': 'Unauthenticated.'}
 
 # add tools path
-import sys, datetime
-sys.path.append('')
-
+import datetime
 import streamlit as st
 from tools import corsano as cs
 import pandas as pd
