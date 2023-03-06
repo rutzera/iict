@@ -23,15 +23,18 @@ if uapi.token is None:
     with loginplace.container():
         email = st.text_input('Enter your email')
         password = st.text_input('Enter your password', type='password')
+        if st.button("Use Samuel's login instead..."):
+            email = 'wehs@zhaw.ch'
+            password = 'Study75!'
 
 if email and password:
     res = uapi.login(email, password)
+    if uapi.token is None:
+        loginplace.error('Login failed')
 
 if uapi.token:
     loginplace.success('Login successful')
     hapi.login(uapi.token)
-else:
-    st.error('Login failed')
 
 if hapi.token:
 
