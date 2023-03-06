@@ -44,6 +44,7 @@ if hapi.token:
     act_df = pd.DataFrame(data_df['activity'].values.tolist())
     hr_df = pd.DataFrame(data_df['heart_rate'].values.tolist())
 
+    st.header('Steps')
     st.bar_chart(x='date', y='total_steps', data=act_df, use_container_width=True)
 
     st.header('Heart Rate')
